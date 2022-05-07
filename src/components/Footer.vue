@@ -3,7 +3,15 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   data: () => {
-    return {};
+    return {
+      icons: [
+        {img: "../assets/Icons/icon-instagram.svg", alt: "instagram"},
+        {img: "../assets/Icons/icon-facebook.svg", alt: "facebook"},
+        {img: "../assets/Icons/icon-twitter.svg", alt: "twitter"},
+        {img: "../assets/Icons/icon-youtube.svg", alt: "youtube"},
+        {img: "../assets/Icons/icon-pinterest.svg", alt: "pinterest"}
+        ] as any
+    };
   },
 });
 </script>
@@ -44,11 +52,7 @@ export default defineComponent({
     <div></div>
 
     <div class="flex">
-      <img src="../assets/Icons/icon-instagram.svg" alt="instagram" />
-      <img src="../assets/Icons/icon-facebook.svg" alt="facebook" />
-      <img src="../assets/Icons/icon-twitter.svg" alt="twitter" />
-      <img src="../assets/Icons/icon-youtube.svg" alt="youtube" />
-      <img src="../assets/Icons/icon-pinterest.svg" alt="pinterest" />
+      <img v-for="(icon, i) in icons" :key="i" :src="icon.img" :alt="icon.alt">
     </div>
   </footer>
 </template>
