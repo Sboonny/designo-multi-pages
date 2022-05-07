@@ -1,3 +1,61 @@
-<template>
+<script lang="ts">
+import { defineComponent } from "vue";
 
+export default defineComponent({
+  data: () => {
+    return {};
+  },
+});
+</script>
+
+<template>
+  <footer>
+    <div>
+      <img src="../assets/logo-light.png" alt="logo" class="logo" />
+    </div>
+
+    <div>
+      <ul class="underline-indicators flex primary-navigation" role="list">
+        <li>
+          <a class="ff-sans-cond uppercase letter-spacing-2">Company</a>
+        </li>
+        <li>
+          <a class="ff-sans-cond uppercase letter-spacing-2">Locations</a>
+        </li>
+        <li>
+          <a class="ff-sans-cond uppercase letter-spacing-2">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <ol role="list">
+        <li>Designo Central Office</li>
+        <li>3886 Wellington Street</li>
+        <li>Toronto, Ontario M9C 3J5</li>
+      </ol>
+      <ol role="list">
+        <li>Contact Us (Central Office)</li>
+        <li>P : +1 253-863-8967</li>
+        <li>M : contact@designo.com</li>
+      </ol>
+    </div>
+
+    <div></div>
+
+    <div class="flex">
+      <img src="../assets/Icons/icon-instagram.svg" alt="instagram" />
+      <img src="../assets/Icons/icon-facebook.svg" alt="facebook" />
+      <img src="../assets/Icons/icon-twitter.svg" alt="twitter" />
+      <img src="../assets/Icons/icon-youtube.svg" alt="youtube" />
+      <img src="../assets/Icons/icon-pinterest.svg" alt="pinterest" />
+    </div>
+  </footer>
 </template>
+
+
+<style scoped>
+footer {
+  background-color: darkviolet;
+}
+</style>
