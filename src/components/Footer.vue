@@ -17,12 +17,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <footer>
-    <div>
+  <footer class="grid footer-layout">
+    <div class="logo-area">
       <img src="../assets/logo-light.png" alt="logo" class="logo" />
     </div>
 
-    <div>
+    <div class="company-nav-area">
       <ul class="underline-indicators flex primary-navigation" role="list">
         <li>
           <a class="ff-sans-cond uppercase letter-spacing-2">Company</a>
@@ -36,12 +36,14 @@ export default defineComponent({
       </ul>
     </div>
 
-    <div>
+    <div class="addres-area">
       <ol role="list">
         <li>Designo Central Office</li>
         <li>3886 Wellington Street</li>
         <li>Toronto, Ontario M9C 3J5</li>
       </ol>
+    </div>
+    <div class="content-area">
       <ol role="list">
         <li>Contact Us (Central Office)</li>
         <li>P : +1 253-863-8967</li>
@@ -49,9 +51,8 @@ export default defineComponent({
       </ol>
     </div>
 
-    <div></div>
 
-    <div class="flex">
+    <div class="flex icons-area">
       <img v-for="(icon, i) in icons" :key="i" :src="icon.img" :alt="icon.alt">
     </div>
   </footer>
@@ -59,7 +60,10 @@ export default defineComponent({
 
 
 <style scoped>
-footer {
-  background-color: darkviolet;
+.footer-layout {
+  background-color: hsl(var(--dark-blue));
+  color: white;
 }
+
+
 </style>
