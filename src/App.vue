@@ -1,11 +1,31 @@
 <script setup lang="ts">
 import HeaderVue from "./components/Header.vue";
 import FooterVue from "./components/Footer.vue";
+import ProjectsVue from "./components/Projects.vue";
+import HomeContentVue from "./components/HomeContent.vue";
+import ExperienceVue from "./components/Experiences.vue"
+import ContactVue from "./components/Contact.vue"
+import AboutVue from "./components/About.vue"
 </script>
 
 
 <template>
   <HeaderVue />
+  <HomeContentVue >
+    <template v-slot:homeContent />
+  </HomeContentVue>
+  <ExperienceVue >
+    <template v-slot:experience />
+  </ExperienceVue>
+  <ContactVue >
+    <template v-slot:Contact />
+  </ContactVue>
+  <AboutVue >
+    <template v-slot:about />
+  </AboutVue>
+  <ProjectsVue >
+    <template v-slot:project />
+  </ProjectsVue>
   <FooterVue />
 </template>
 

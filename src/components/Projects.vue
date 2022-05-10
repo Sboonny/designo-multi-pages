@@ -1,8 +1,5 @@
-<template>
-  Our Company
-  Locations
-  Contact
-
+<template name="project">
+<main>
   App design
   Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.
 
@@ -27,20 +24,9 @@
   Graphic Design
   View Projects
 
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can help
-  your business grow.
-  Get in touch
-
-  Our company
-  Locations
-  Contact
-
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
-
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
+  <h2>Let’s talk about your project</h2>
+  <p>Ready to take it to the next level? Contact us today and find out how our expertise can help
+  your business grow.</p>
+  <button>Get in touch</button>
+  </main>
 </template>
