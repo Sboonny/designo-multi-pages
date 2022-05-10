@@ -1,47 +1,31 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  data: () => {
-    return {
-      icons: [
-        {img: "../assets/Icons/icon-instagram.svg", alt: "instagram"},
-        {img: "../assets/Icons/icon-facebook.svg", alt: "facebook"},
-        {img: "../assets/Icons/icon-twitter.svg", alt: "twitter"},
-        {img: "../assets/Icons/icon-youtube.svg", alt: "youtube"},
-        {img: "../assets/Icons/icon-pinterest.svg", alt: "pinterest"}
-        ] as any
-    };
-  },
-});
-</script>
-
 <template>
-  <footer>
-    <div>
+  <footer class="grid footer-layout">
+    <div class="logo-area">
       <img src="../assets/logo-light.png" alt="logo" class="logo" />
     </div>
 
-    <div>
+    <div class="company-nav-area">
       <ul class="underline-indicators flex primary-navigation" role="list">
         <li>
-          <a class="ff-sans-cond uppercase letter-spacing-2">Company</a>
+          <a class="ff-sans-cond uppercase">Company</a>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase letter-spacing-2">Locations</a>
+          <a class="ff-sans-cond uppercase">Locations</a>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase letter-spacing-2">Contact</a>
+          <a class="ff-sans-cond uppercase">Contact</a>
         </li>
       </ul>
     </div>
 
-    <div>
+    <div class="address-area">
       <ol role="list">
         <li>Designo Central Office</li>
         <li>3886 Wellington Street</li>
         <li>Toronto, Ontario M9C 3J5</li>
       </ol>
+    </div>
+    <div class="content-area">
       <ol role="list">
         <li>Contact Us (Central Office)</li>
         <li>P : +1 253-863-8967</li>
@@ -49,17 +33,45 @@ export default defineComponent({
       </ol>
     </div>
 
-    <div></div>
-
-    <div class="flex">
-      <img v-for="(icon, i) in icons" :key="i" :src="icon.img" :alt="icon.alt">
+    <div class="flex icons-area">
+      <img src="../assets/Icons/icon-instagram.svg" alt="instagram" />
+      <img src="../assets/Icons/icon-facebook.svg" alt="facebook" />
+      <img src="../assets/Icons/icon-twitter.svg" alt="twitter" />
+      <img src="../assets/Icons/icon-youtube.svg" alt="youtube" />
+      <img src="../assets/Icons/icon-pinterest.svg" alt="pinterest" />
     </div>
   </footer>
 </template>
 
 
-<style scoped>
-footer {
-  background-color: darkviolet;
+<style>
+.footer-layout {
+  background-color: hsl(var(--dark-blue));
+  color: white;
+  place-items: center;
 }
+@media (min-width: 35em) {
+  .logo-area {
+   grid-area: logo;
+  }
+  .company-nav-area {
+   grid-area: nav;
+  }
+  .address-area {
+    grid-area: address;
+  }
+  .content-area {
+    grid-area: contentarea;
+  }
+  .icons-area {
+    grid-area: icons;
+  }
+  
+  .footer-layout {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "logo . nav nav"
+                          "address contentarea . icons";
+  }
+}
+
 </style>

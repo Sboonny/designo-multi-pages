@@ -10,6 +10,9 @@ import FooterVue from "./components/Footer.vue";
 </template>
 
 <style>
+:root {
+  --dark-blue: 270 3% 11%
+}
 *,
 *::before,
 *::after {

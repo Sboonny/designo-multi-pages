@@ -29,6 +29,10 @@
 </template>
 
 <style scoped>
+  .mobile-nav-toggle {
+    display: none;
+  }
+
 @media (max-width: 35rem) {
   .primary-navigation {
     position: fixed;
@@ -42,11 +46,6 @@
   .primary-navigation[data-visible="true"] {
     transform: translateX(0);
   }
-}
-.mobile-nav-toggle {
-  display: none;
-}
-@media (max-width: 35em) {
   .mobile-nav-toggle {
     display: block;
     position: absolute;
