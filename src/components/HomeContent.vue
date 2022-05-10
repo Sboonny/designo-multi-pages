@@ -1,4 +1,4 @@
-<template>
+<template name="homeContent">
 
   Award-winning custom designs and digital branding solutions
 
