@@ -8,22 +8,45 @@ import ContactVue from "./components/Contact.vue"
 import AboutVue from "./components/About.vue"
 </script>
 
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "AppPages",
+  data: () => {
+    return {
+      HomePageVisible: true as boolean,
+      AboutPageVisible: false as boolean,
+      ContactPageVisible: false as boolean,
+      ProjectsPageVisible: false as boolean,
+      ExperiencesPageVisible: false as boolean
+    }
+  }, 
+  mounted() {
+    this.HomePageVisible;
+    this.AboutPageVisible;
+    this.ContactPageVisible;
+    this.ProjectsPageVisible;
+    this.ExperiencesPageVisible;
+  }
+}) 
+</script>
 
 <template>
   <HeaderVue />
-  <HomeContentVue >
+  <HomeContentVue v-if="HomePageVisible">
     <template v-slot:homeContent />
   </HomeContentVue>
-  <ExperienceVue >
+  <ExperienceVue v-if="ExperiencesPageVisible">
     <template v-slot:experience />
   </ExperienceVue>
-  <ContactVue >
+  <ContactVue  v-if="ContactPageVisible" >
     <template v-slot:Contact />
   </ContactVue>
-  <AboutVue >
+  <AboutVue v-if="AboutPageVisible"  >
     <template v-slot:about />
   </AboutVue>
-  <ProjectsVue >
+  <ProjectsVue  v-if="ProjectsPageVisible" >
     <template v-slot:project />
   </ProjectsVue>
   <FooterVue />
