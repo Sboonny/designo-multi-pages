@@ -2,7 +2,7 @@
 import HeaderVue from "./components/Header.vue";
 import FooterVue from "./components/Footer.vue";
 import ProjectsVue from "./components/Projects.vue";
-import HomeContentVue from "./components/HomeContent.vue";
+import * as HomeContentVue from "./components/HomeContent.vue";
 import ExperienceVue from "./components/Experiences.vue"
 import ContactVue from "./components/Contact.vue"
 import AboutVue from "./components/About.vue"
@@ -22,12 +22,22 @@ export default defineComponent({
       ExperiencesPageVisible: false as boolean
     }
   }, 
+  methods: {
+    //  this function will work as make the current page invisible
+    //  make the wanted page visible
+     showPage() {
+      //  test
+    this.HomePageVisible = !this.HomePageVisible
+    this.AboutPageVisible = !this.AboutPageVisible
+  }
+  },
   mounted() {
     this.HomePageVisible;
     this.AboutPageVisible;
     this.ContactPageVisible;
     this.ProjectsPageVisible;
     this.ExperiencesPageVisible;
+    this.showPage()
   }
 }) 
 </script>
