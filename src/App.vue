@@ -145,6 +145,9 @@ picture {
   text-transform: uppercase;
 }
 
+.cursor-pointer {
+    cursor: pointer; 
+}
 .flex {
   gap: var(--gap, 1.5em);
   display: flex;

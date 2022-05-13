@@ -1,6 +1,6 @@
 <template>
   <a class="skip-to-content" href="#main">Skip to content</a>
-  <header class="flex">
+  <header class="flex nav-header">
     <div>
       <img src="../assets/logo-dark.png" alt="logo" class="logo" />
     </div>
@@ -15,20 +15,31 @@
         role="list"
       >
         <li class="active">
-          <a class="ff-sans-cond uppercase letter-spacing-2">Company</a>
+          <a class="ff-sans-cond uppercase cursor-pointer">Company</a>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase letter-spacing-2">Locations</a>
+          <a class="ff-sans-cond uppercase cursor-pointer">Locations</a>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase letter-spacing-2">Contact</a>
+          <a class="ff-sans-cond uppercase cursor-pointer">Contact</a>
         </li>
       </ul>
     </nav>
   </header>
 </template>
 
-<style scoped>
+<style>
+  .nav-header {
+    justify-content: space-between;
+  }
+
+  ul li a {
+    font-family: "JOST", sans-serif;
+    letter-spacing: 2.5px;
+    margin-inline: 1em;
+  }
+
+
   .mobile-nav-toggle {
     display: none;
   }

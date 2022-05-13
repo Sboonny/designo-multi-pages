@@ -7,13 +7,13 @@
     <div class="company-nav-area">
       <ul class="underline-indicators flex primary-navigation" role="list">
         <li>
-          <a class="ff-sans-cond uppercase">Company</a>
+          <a class="ff-sans-cond uppercase cursor-pointer">Company</a>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase">Locations</a>
+          <a class="ff-sans-cond uppercase cursor-pointer">Locations</a>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase">Contact</a>
+          <a class="ff-sans-cond uppercase cursor-pointer">Contact</a>
         </li>
       </ul>
     </div>
