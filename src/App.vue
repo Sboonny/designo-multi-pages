@@ -2,7 +2,7 @@
 import HeaderVue from "./components/Header.vue";
 import FooterVue from "./components/Footer.vue";
 import ProjectsVue from "./components/Projects.vue";
-import * as HomeContentVue from "./components/HomeContent.vue";
+import HomeContentVue from "./components/HomeContent.vue";
 import ExperienceVue from "./components/Experiences.vue"
 import ContactVue from "./components/Contact.vue"
 import AboutVue from "./components/About.vue"
@@ -11,8 +11,18 @@ import AboutVue from "./components/About.vue"
 <script lang="ts">
 import { defineComponent } from "vue";
 
+
 export default defineComponent({
   name: "AppPages",
+  components: {
+   HeaderVue,
+   FooterVue,
+   ProjectsVue,
+   HomeContentVue,
+   ExperienceVue,
+   ContactVue,
+   AboutVue
+  },
   data: () => {
     return {
       HomePageVisible: true as boolean,
@@ -44,7 +54,7 @@ export default defineComponent({
 
 <template>
   <HeaderVue />
-  <HomeContentVue v-if="HomePageVisible">
+  <HomeContentVue v-if="HomePageVisible" >
     <template v-slot:homeContent />
   </HomeContentVue>
   <ExperienceVue v-if="ExperiencesPageVisible">

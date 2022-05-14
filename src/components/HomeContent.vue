@@ -1,9 +1,8 @@
 <template name="homeContent">
-
   Award-winning custom designs and digital branding solutions
 
   With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
-  and engaging brand experiences. <button @click="showPage()">Find out more about our services</button>
+  and engaging brand experiences. <button>Find out more about our services</button>
 
   Learn more
 
@@ -32,6 +31,5 @@
   Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
   Get in touch
 </template>
-<script lang="ts">
-import App from "App.vue";
+
 </script>
