@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import HeaderVue from "./components/Header.vue";
 import FooterVue from "./components/Footer.vue";
-import ProjectsVue from "./components/Projects.vue";
-import HomeContentVue from "./components/HomeContent.vue";
-import ExperienceVue from "./components/Experiences.vue"
-import ContactVue from "./components/Contact.vue"
-import AboutVue from "./components/About.vue"
 </script>
 
 <script lang="ts">
@@ -17,11 +12,6 @@ export default defineComponent({
   components: {
    HeaderVue,
    FooterVue,
-   ProjectsVue,
-   HomeContentVue,
-   ExperienceVue,
-   ContactVue,
-   AboutVue
   },
   data: () => {
     return {
@@ -33,13 +23,7 @@ export default defineComponent({
     }
   }, 
   methods: {
-    //  this function will work as make the current page invisible
-    //  make the wanted page visible
-     showPage() {
-      //  test
-    this.HomePageVisible = !this.HomePageVisible
-    this.AboutPageVisible = !this.AboutPageVisible
-  }
+
   },
   mounted() {
     this.HomePageVisible;
@@ -47,28 +31,12 @@ export default defineComponent({
     this.ContactPageVisible;
     this.ProjectsPageVisible;
     this.ExperiencesPageVisible;
-    this.showPage()
   }
 }) 
 </script>
 
 <template>
   <HeaderVue />
-  <HomeContentVue v-if="HomePageVisible" >
-    <template v-slot:homeContent />
-  </HomeContentVue>
-  <ExperienceVue v-if="ExperiencesPageVisible">
-    <template v-slot:experience />
-  </ExperienceVue>
-  <ContactVue  v-if="ContactPageVisible" >
-    <template v-slot:Contact />
-  </ContactVue>
-  <AboutVue v-if="AboutPageVisible"  >
-    <template v-slot:about />
-  </AboutVue>
-  <ProjectsVue  v-if="ProjectsPageVisible" >
-    <template v-slot:project />
-  </ProjectsVue>
   <FooterVue />
 </template>
 
