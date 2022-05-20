@@ -25,7 +25,6 @@
         </li>
       </ul>
     </nav>
-    <router-view/>
   </header>
 </template>
 

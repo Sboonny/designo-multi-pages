@@ -12,31 +12,13 @@ export default defineComponent({
   components: {
    HeaderVue,
    FooterVue,
-  },
-  data: () => {
-    return {
-      HomePageVisible: true as boolean,
-      AboutPageVisible: false as boolean,
-      ContactPageVisible: false as boolean,
-      ProjectsPageVisible: false as boolean,
-      ExperiencesPageVisible: false as boolean
-    }
-  }, 
-  methods: {
-
-  },
-  mounted() {
-    this.HomePageVisible;
-    this.AboutPageVisible;
-    this.ContactPageVisible;
-    this.ProjectsPageVisible;
-    this.ExperiencesPageVisible;
   }
 }) 
 </script>
 
 <template>
   <HeaderVue />
+    <router-view />
   <FooterVue />
 </template>
 

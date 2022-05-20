@@ -1,30 +1,24 @@
 import VueRouter from 'vue-router'
-import Home from '../views/HomeContent.vue'
-import About from '../views/About.vue'
-import Contact from '../views/Contact.vue'
-
-
-const routes = [
-    {
-        path: '/',
-        name: 'Home',
-        componenent: Home
-    },
-    {
-        path: "/about",
-        name: "about",
-        componenent: About
-    },
-    {
-        path: "/contact",
-        name: "contact",
-        componenent: Contact
-    }
-]
-
+    
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
-    routes
+    routes: [
+        {
+          path: '/',
+          name: 'home',
+          component: () => import('../views/HomeContent.vue')
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: () => import('../views/About.vue')
+        },
+        {
+          path: '/contact',
+          name: 'contact',
+          component: () => import('../views/Contact.vue')
+        }
+      ]
 })
 
 export default router
