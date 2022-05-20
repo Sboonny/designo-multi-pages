@@ -1,32 +1,36 @@
-import Vue from 'vue'
-import { createRouter, createWebHistory} from 'vue-router'
-import Home from '../views/Home.vue'
+import VueRouter from 'vue-router'
+import Home from '../views/HomeContent.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
-import { def } from '@vue/shared'
+import { Component } from 'vue'
 
+interface routeType {
+path: string,
+name: string,
+componenent: Component
+}
 
- const routes = [
-     {
-         path: '/',
-         name: 'Home',
-         componenent: Home
-     },
-     {
-         path: "/about",
-         name: "about",
-         componenent: About
-     },
-     {
+const routes: routeType = [
+    {
+        path: '/',
+        name: 'Home',
+        componenent: Home
+    },
+    {
+        path: "/about",
+        name: "about",
+        componenent: About
+    },
+    {
         path: "/contact",
         name: "contact",
         componenent: Contact
     }
- ]
+]
 
- const router = VueRouter.createRouter({
+const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
-    routes 
- })
+    routes
+})
 
- export default router
+export default router

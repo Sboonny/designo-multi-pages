@@ -15,16 +15,17 @@
         role="list"
       >
         <li class="active">
-          <a class="ff-sans-cond uppercase cursor-pointer">Company</a>
+          <router-link to="/" class="ff-sans-cond uppercase cursor-pointer">Company</router-link>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase cursor-pointer">Locations</a>
+          <router-link to="/" class="ff-sans-cond uppercase cursor-pointer">Locations</router-link>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase cursor-pointer">Contact</a>
+          <router-link to="/" class="ff-sans-cond uppercase cursor-pointer">Contact</router-link>
         </li>
       </ul>
     </nav>
+    <router-view/>
   </header>
 </template>
 
