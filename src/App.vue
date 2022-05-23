@@ -1,54 +1,11 @@
 <script setup lang="ts">
 import HeaderVue from "./components/Header.vue";
 import FooterVue from "./components/Footer.vue";
-import ProjectsVue from "./components/Projects.vue";
-import HomeContentVue from "./components/HomeContent.vue";
-import ExperienceVue from "./components/Experiences.vue"
-import ContactVue from "./components/Contact.vue"
-import AboutVue from "./components/About.vue"
-</script>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "AppPages",
-  data: () => {
-    return {
-      HomePageVisible: true as boolean,
-      AboutPageVisible: false as boolean,
-      ContactPageVisible: false as boolean,
-      ProjectsPageVisible: false as boolean,
-      ExperiencesPageVisible: false as boolean
-    }
-  }, 
-  mounted() {
-    this.HomePageVisible;
-    this.AboutPageVisible;
-    this.ContactPageVisible;
-    this.ProjectsPageVisible;
-    this.ExperiencesPageVisible;
-  }
-}) 
 </script>
 
 <template>
   <HeaderVue />
-  <HomeContentVue v-if="HomePageVisible">
-    <template v-slot:homeContent />
-  </HomeContentVue>
-  <ExperienceVue v-if="ExperiencesPageVisible">
-    <template v-slot:experience />
-  </ExperienceVue>
-  <ContactVue  v-if="ContactPageVisible" >
-    <template v-slot:Contact />
-  </ContactVue>
-  <AboutVue v-if="AboutPageVisible"  >
-    <template v-slot:about />
-  </AboutVue>
-  <ProjectsVue  v-if="ProjectsPageVisible" >
-    <template v-slot:project />
-  </ProjectsVue>
+    <router-view />
   <FooterVue />
 </template>
 
@@ -135,6 +92,9 @@ picture {
   text-transform: uppercase;
 }
 
+.cursor-pointer {
+    cursor: pointer; 
+}
 .flex {
   gap: var(--gap, 1.5em);
   display: flex;
@@ -153,4 +113,8 @@ picture {
     flex-direction: row;
   }
 }
+
+#nav { padding: 30px; }
+#nav a { font-weight: bold; color: #2c3e50; }
+#nav a.router-link-exact-active { color: #42b983; }
 </style>

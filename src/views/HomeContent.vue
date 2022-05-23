@@ -1,9 +1,9 @@
-<template name="homeContent">
-
+<template>
+  <div class="home">
   Award-winning custom designs and digital branding solutions
 
   With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
-  and engaging brand experiences. Find out more about our services.
+  and engaging brand experiences. <button>Find out more about our services</button>
 
   Learn more
 
@@ -30,5 +30,17 @@
 
   Let’s talk about your project
   Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
-  Get in touch
+  <button>Get in touch</button>
+  </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent ({
+  name: "Home",
+  components: {
+
+  }
+})
+</script>
