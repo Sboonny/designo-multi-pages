@@ -3,19 +3,6 @@ import HeaderVue from "./components/Header.vue";
 import FooterVue from "./components/Footer.vue";
 </script>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-
-export default defineComponent({
-  name: "AppPages",
-  components: {
-   HeaderVue,
-   FooterVue,
-  }
-}) 
-</script>
-
 <template>
   <HeaderVue />
     <router-view />
@@ -126,4 +113,8 @@ picture {
     flex-direction: row;
   }
 }
+
+#nav { padding: 30px; }
+#nav a { font-weight: bold; color: #2c3e50; }
+#nav a.router-link-exact-active { color: #42b983; }
 </style>
