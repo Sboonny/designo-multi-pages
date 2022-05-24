@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-  Award-winning custom designs and digital branding solutions
+  <h1>Award-winning custom designs and digital branding solutions</h1>
 
-  With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
-  and engaging brand experiences. <button>Find out more about our services</button>
+  <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
+  and engaging brand experiences. <router-link to="/about">Find out more about our services</router-link></p>
 
   Learn more
 
@@ -27,10 +27,6 @@
   Friendly
   We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we
   strive to give them the best experience a company can provide.
-
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
-  <button>Get in touch</button>
   </div>
 </template>
 

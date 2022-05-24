@@ -1,19 +1,25 @@
 <template>
+
+
   <footer class="grid footer-layout">
+      Let’s talk about your project
+  Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
+  <router-link to="/contact">Get in touch</router-link>
+
     <div class="logo-area">
-      <img src="../assets/logo-light.png" alt="logo" class="logo" />
+      <router-link to="/"><img src="../assets/logo-light.png" alt="logo" class="logo" /></router-link>
     </div>
 
     <div class="company-nav-area">
       <ul class="underline-indicators flex primary-navigation" role="list">
         <li>
-          <a class="ff-sans-cond uppercase cursor-pointer">Company</a>
+          <router-link to="/about" class="ff-sans-cond uppercase cursor-pointer">Company</router-link>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase cursor-pointer">Locations</a>
+          <router-link to="/locations" class="ff-sans-cond uppercase cursor-pointer">Locations</router-link>
         </li>
         <li>
-          <a class="ff-sans-cond uppercase cursor-pointer">Contact</a>
+          <router-link to="/contact" class="ff-sans-cond uppercase cursor-pointer">Contact</router-link>
         </li>
       </ul>
     </div>

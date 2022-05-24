@@ -2,7 +2,7 @@
   <a class="skip-to-content" href="#main">Skip to content</a>
   <header class="flex nav-header">
     <div>
-      <img src="../assets/logo-dark.png" alt="logo" class="logo" />
+      <router-link to="/"><img src="../assets/logo-dark.png" alt="logo" class="logo" /></router-link>
     </div>
     <nav>
       <button class="mobile-nav-toggle" aria-controls="primary-navigation">
@@ -15,13 +15,13 @@
         role="list"
       >
         <li class="active">
-          <router-link to="/" class="ff-sans-cond uppercase cursor-pointer">Company</router-link>
+          <router-link to="/about" class="ff-sans-cond uppercase cursor-pointer">Company</router-link>
         </li>
         <li>
-          <router-link to="/" class="ff-sans-cond uppercase cursor-pointer">Locations</router-link>
+          <router-link to="/locations" class="ff-sans-cond uppercase cursor-pointer">Locations</router-link>
         </li>
         <li>
-          <router-link to="/" class="ff-sans-cond uppercase cursor-pointer">Contact</router-link>
+          <router-link to="/contact" class="ff-sans-cond uppercase cursor-pointer">Contact</router-link>
         </li>
       </ul>
     </nav>
