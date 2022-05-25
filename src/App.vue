@@ -5,7 +5,9 @@ import FooterVue from "./components/Footer.vue";
 
 <template>
   <HeaderVue />
-  <router-view />
+  <Transition name="fade">
+    <router-view />
+  </Transition>
   <FooterVue />
 </template>
 
@@ -30,14 +32,14 @@ select {
 
 @media (prefers-reduced-motion: reduce) {
 
-  *,
+  /* *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
+  } */
 }
 
 ul[role="list"],
@@ -127,5 +129,15 @@ picture {
 
 .router-link {
   text-decoration: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
