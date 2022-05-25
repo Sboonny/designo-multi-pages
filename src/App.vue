@@ -5,14 +5,16 @@ import FooterVue from "./components/Footer.vue";
 
 <template>
   <HeaderVue />
-    <router-view />
+  <router-view />
   <FooterVue />
 </template>
 
 <style>
 :root {
-  --dark-blue: 270 3% 11%
+  --dark-blue: 270 3% 11%;
+  --pink-skin: 11 76% 66%;
 }
+
 *,
 *::before,
 *::after {
@@ -27,6 +29,7 @@ select {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -50,6 +53,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  margin: auto;
 }
 
 img,
@@ -93,28 +97,35 @@ picture {
 }
 
 .cursor-pointer {
-    cursor: pointer; 
+  cursor: pointer;
 }
+
 .flex {
   gap: var(--gap, 1.5em);
   display: flex;
 }
 
 .grid {
-  gap: var(--gap, 1.5em);
+  gap: var(--gap, 1em);
   display: grid;
 }
-.primary-navigation {
-  --gap: clamp(1rem, 5vw, 3rem);
+
+.flex-direction {
   flex-direction: column;
 }
+
 @media (min-width: 35em) {
-  .primary-navigation {
+  body {
+    width: 85%;
+    --gap: 3em;
+  }
+
+  .flex-direction {
     flex-direction: row;
   }
 }
 
-#nav { padding: 30px; }
-#nav a { font-weight: bold; color: #2c3e50; }
-#nav a.router-link-exact-active { color: #42b983; }
+.router-link {
+  text-decoration: none;
+}
 </style>
