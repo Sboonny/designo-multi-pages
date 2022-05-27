@@ -7,7 +7,7 @@
         <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design,
           and engaging brand experiences.</p>
 
-        <router-link to="/about">Learn more</router-link>
+        <router-link to="/about" class="nav-button">Learn more</router-link>
       </div>
       <img src="../assets/Home/image-hero-phone.png" alt="" class="home-img">
 
