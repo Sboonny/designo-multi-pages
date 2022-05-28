@@ -5,9 +5,8 @@ import FooterVue from "./components/Footer.vue";
 
 <template>
   <HeaderVue />
-  <Transition name="fade">
-    <router-view />
-  </Transition>
+  <Transition name="fade" />
+  <router-view />
   <FooterVue />
 </template>
 
@@ -51,11 +50,12 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-body {
+body,
+section {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  margin: auto;
+  margin: 0
 }
 
 img,
@@ -94,6 +94,22 @@ picture {
   transform: translateY(0);
 }
 
+.bg-white {
+  background-color: whitesmoke;
+}
+
+.fc-red-pink {
+  color: hsl(var(--pink-skin))
+}
+
+.bg-red-pink {
+  background-color: hsl(var(--pink-skin));
+}
+
+.fc-white {
+  color: whitesmoke
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -103,7 +119,7 @@ picture {
 }
 
 .flex {
-  gap: var(--gap, 1.5em);
+  gap: var(--gap, 1em);
   display: flex;
 }
 
@@ -116,10 +132,21 @@ picture {
   flex-direction: column;
 }
 
+.nav-button {
+  padding-inline: 1em;
+  padding-block: 1.25em;
+  margin: auto;
+  text-decoration: none;
+  letter-spacing: 2px;
+  outline: 2px solid black;
+  margin-block: 1em;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
 @media (min-width: 35em) {
   body {
     width: 85%;
-    --gap: 3em;
   }
 
   .flex-direction {

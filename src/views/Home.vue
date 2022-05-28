@@ -1,32 +1,31 @@
 <template name="home">
   <main class="grid" id="main">
     <section class="main-content flex flex-direction">
-      <div>
+      <div class="home-learn-more">
         <h1>Award-winning custom designs and digital branding solutions</h1>
 
         <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design,
           and engaging brand experiences.</p>
-
-        <router-link to="/about" class="nav-button">Learn more</router-link>
+        <router-link to="/about" class="nav-button uppercase bg-white fc-red-pink">Learn more</router-link>
       </div>
-      <img src="../assets/Home/image-hero-phone.png" alt="" class="home-img">
+      <div class="home-img" />
 
     </section>
 
 
-    <section class="">
-      <div>
+    <section class="portfolio-links">
+      <a class="web-design-link">
         <h2>Web Design</h2>
         <p>View Projects</p>
-      </div>
-      <div>
+      </a>
+      <a class="app-design-link">
         <h2>App Design</h2>
         <p>View Projects</p>
-      </div>
-      <div>
+      </a>
+      <a class="graphic-design-link">
         <h2>Graphic Design</h2>
         <p>View Projects</p>
-      </div>
+      </a>
     </section>
 
 
@@ -581,12 +580,30 @@ export default defineComponent({
 main .main-content {
   background-color: hsl(var(--pink-skin));
   color: hsl(0 5% 95%);
-  height: 100vh;
-
 }
 
 main .main-content .home-img {
-  position: static;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/Home/image-hero-phone.png);
+  background-size: cover;
+}
 
+.home-learn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em
+}
+
+@media (min-width: 35em) {
+  main .main-content .home-img {
+    background-position: top, center;
+    background-size: auto;
+  }
+
+  .home-learn-more {
+    gap: 3em
+  }
 }
 </style>

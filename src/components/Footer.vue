@@ -2,9 +2,10 @@
 
 
   <footer class="grid footer-layout">
-      Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
-  <router-link to="/contact">Get in touch</router-link>
+    <!-- <h3>Let’s talk about your project</h3>
+    <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.
+    </p>
+    <router-link to="/contact">Get in touch</router-link> -->
 
     <div class="logo-area">
       <router-link to="/"><img src="../assets/logo-light.png" alt="logo" class="logo" /></router-link>
@@ -55,29 +56,35 @@
   background-color: hsl(var(--dark-blue));
   color: white;
   place-items: center;
+  width: 100vw;
+  margin: 0;
 }
+
 @media (min-width: 35em) {
   .logo-area {
-   grid-area: logo;
+    grid-area: logo;
   }
+
   .company-nav-area {
-   grid-area: nav;
+    grid-area: nav;
   }
+
   .address-area {
     grid-area: address;
   }
+
   .content-area {
     grid-area: contentarea;
   }
+
   .icons-area {
     grid-area: icons;
   }
-  
+
   .footer-layout {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "logo . nav nav"
-                          "address contentarea . icons";
+      "address contentarea . icons";
   }
 }
-
 </style>
